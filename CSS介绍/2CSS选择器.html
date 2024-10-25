@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器</title>
+    <style>
+        h1{
+            color:rgba(9, 199, 66, 0.541);
+            font-family:'kaiti';
+        }
+        .classSelector
+        {
+            color: aquamarine;
+            background-color: blue;
+        }
+        #idSelector
+        {
+            color: rgb(0, 0, 0);
+            background-color: aqua;
+        }
+        #subselector>#element1n 
+        {
+            color: black;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>这是元素选择器示例</h1>
+    </div>
+    <div>
+        <h1 class="classSelector">这是类选择器示例</h1>
+        <p class="classSelector">段落</p>
+    </div>
+    <div id="subselector"> 
+        <p id="idSelector">
+            这是ID选择器示例
+            
+        </p>
+        <p id="element1">这是子元素选择器示例</p>
+        
+
+    </div>
+
+</body>
+</html>

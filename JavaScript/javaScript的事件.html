@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScriptEvent</title>
+    <script>
+        function onClick_Event()
+        {
+            alert("点击事件触发");
+
+        }
+        function onMouseout_Event()
+        {
+            document.getElementById("eventButton").innerText = "触发鼠标离开事件";
+        }
+        function onMouseOver_Event()
+        {
+            document.getElementById("eventButton").innerText="触发鼠标经过事件";
+        }
+    </script>
+</head>
+<body>
+    <!-- 通过HTML绑定事件 -->
+    <button id="eventButton" onmouseout="onMouseout_Event()" onmouseover="onMouseOver_Event()" onclick="onClick_Event()">html方式事件测试按钮</button>
+    <button id = "DOMButtonTest"></button>
+    <script>
+        let btn = document.getElementById("DOMButtonTest");
+        btn.innerText = "TestButton";
+        //btn.onclick = function(){alert("通过属性绑定事件");};
+        btn.addEventListener("click",function(){alert("通过addeventListener绑定事件");});
+    </script>
+
+</body>
+</html>
